@@ -25,6 +25,12 @@
             <version>${parent.version}</version>
             <type>apklib</type>
         </dependency>
+
+        <dependency>
+            <groupId>android</groupId>
+            <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

@@ -18,6 +18,12 @@
             <groupId>com.nineoldandroids</groupId>
             <artifactId>library</artifactId>
         </dependency>
+        <dependency>
+            <groupId>android</groupId>
+            <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
