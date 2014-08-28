@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.frakbot.glowpadbackport</groupId>
+    <artifactId>glowpadbackport-parent</artifactId>
+    <name>GlowPadBackport (parent)</name>
+    <description>Backport of Android 4.1+ GlowPadView back to API 4+ (Android 1.6 and newer).</description>
+    <version>2.1.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Dependencies version -->
+        <android-platform.version>19</android-platform.version>
+        <nineoldandroids.version>2.4.0</nineoldandroids.version>
+        <!-- Plugins version -->
+        <android-maven-plugin.version>3.8.1</android-maven-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+    	<dependencies>
+    		<dependency>
+			    <groupId>com.nineoldandroids</groupId>
+			    <artifactId>library</artifactId>
+			    <version>${nineoldandroids.version}</version>
+				</dependency>
+    	</dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>${android-maven-plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <sdk>
+                            <platform>${android-platform.version}</platform>
+                        </sdk>
+                    </configuration>
+                </plugin>                      
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>GlowPadBackport</module>
+        <module>GlowPadBackport-sample</module>
+    </modules>
+</project>
