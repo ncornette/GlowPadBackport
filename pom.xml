@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Dependencies version -->
         <android-platform.version>19</android-platform.version>
+        <android.version>4.4.2_r3</android.version>
         <nineoldandroids.version>2.4.0</nineoldandroids.version>
         <!-- Plugins version -->
         <android-maven-plugin.version>3.8.1</android-maven-plugin.version>
@@ -30,7 +31,7 @@
             <dependency>
                 <groupId>android</groupId>
                 <artifactId>android</artifactId>
-                <version>4.4.2_r3</version>
+                <version>${android.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -40,13 +41,6 @@
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>1.7</source>
-                        <target>1.7</target>
-                    </configuration>
-                </plugin>
                 <plugin>
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>android-maven-plugin</artifactId>
