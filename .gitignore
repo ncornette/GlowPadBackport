@@ -35,3 +35,10 @@ Config.java
 
 # Sandbox stuff
 _sandbox
+
+# Eclipse generated configuration
+.classpath
+.project
+.settings/
+lint.xml
+target/
