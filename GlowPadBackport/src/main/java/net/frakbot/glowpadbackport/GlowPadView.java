@@ -856,6 +856,7 @@ public class GlowPadView extends View {
         }
     }
 
+    @SuppressWarnings("unused")
     @TargetApi(Build.VERSION_CODES.FROYO)
     private void handleUp(MotionEvent event) {
         if (DEBUG && mDragging) Log.v(TAG, "** Handle RELEASE");
@@ -872,6 +873,7 @@ public class GlowPadView extends View {
         }
     }
 
+    @SuppressWarnings("unused")
     @TargetApi(Build.VERSION_CODES.FROYO)
     private void handleCancel(MotionEvent event) {
         if (DEBUG && mDragging) Log.v(TAG, "** Handle CANCEL");

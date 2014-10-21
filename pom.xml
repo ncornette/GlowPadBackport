@@ -18,7 +18,7 @@
         <android.version>4.4.2_r3</android.version>
         <nineoldandroids.version>2.4.0</nineoldandroids.version>
         <!-- Plugins version -->
-        <android-maven-plugin.version>3.8.1</android-maven-plugin.version>
+        <android-maven-plugin.version>3.9.0-rc.3</android-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -52,6 +52,14 @@
                         </sdk>
                     </configuration>
                 </plugin>                      
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
